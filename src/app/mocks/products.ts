@@ -1,6 +1,6 @@
-import type { Produto } from '../types/product'
+import { Product } from '../types/product'
 
-export const mockProducts: Produto[] = [
+export const mockProducts: Product[] = [
   {
     id: 'notebook-3',
     fotos: [

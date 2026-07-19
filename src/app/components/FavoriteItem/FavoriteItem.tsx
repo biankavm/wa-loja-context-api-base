@@ -1,10 +1,10 @@
 import { calculateDiscountedPrice } from '@/app/helpers'
-import type { Produto } from '@/app/types/product'
+import { Product } from '@/app/types/product'
 import Image from 'next/image'
 
 interface FavoriteItemProps {
-  favoriteItem: Produto
-  setFavorites: React.Dispatch<React.SetStateAction<Produto[]>>
+  favoriteItem: Product
+  setFavorites: React.Dispatch<React.SetStateAction<Product[]>>
 }
 
 export default function FavoriteItem({
@@ -19,17 +19,17 @@ export default function FavoriteItem({
 
   return (
     <tr key={favoriteItem.id}>
-      <td className="d-flex flex-row">
+      <td className='d-flex flex-row'>
         <Image
-          className="rounded"
+          className='rounded'
           src={favoriteItem.fotos[0].src}
           alt={favoriteItem.fotos[0].titulo}
           width={50}
           height={50}
         />
-        <div className="d-flex flex-column ms-2">
-          <span className="">{favoriteItem.nome}</span>
-          <small className="text-muted">{favoriteItem.descricao}</small>
+        <div className='d-flex flex-column ms-2'>
+          <span className=''>{favoriteItem.nome}</span>
+          <small className='text-muted'>{favoriteItem.descricao}</small>
         </div>
       </td>
 
@@ -46,7 +46,7 @@ export default function FavoriteItem({
       <td>
         <button
           onClick={() => removeFavorite(favoriteItem.id)}
-          className="btn btn-outline-danger btn-sm"
+          className='btn btn-outline-danger btn-sm'
         >
           Remover
         </button>

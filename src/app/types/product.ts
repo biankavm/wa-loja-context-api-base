@@ -1,11 +1,11 @@
-export interface Foto {
+export interface Photo {
   titulo: string
   src: string
 }
 
-export interface Produto {
+export interface Product {
   id: string
-  fotos: Foto[]
+  fotos: Photo[]
   nome: string
   preco: string
   desconto: number

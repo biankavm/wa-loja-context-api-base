@@ -1,10 +1,10 @@
 import { calculateDiscountedPrice } from '@/app/helpers'
-import type { Produto } from '@/app/types/product'
+import { Product } from '@/app/types/product'
 import FavoriteItem from '../FavoriteItem/FavoriteItem'
 
 interface FavoritesListProps {
-  favoriteProducts: Produto[]
-  setFavorites: React.Dispatch<React.SetStateAction<Produto[]>>
+  favoriteProducts: Product[]
+  setFavorites: React.Dispatch<React.SetStateAction<Product[]>>
 }
 
 export default function FavoritesList({
@@ -18,16 +18,16 @@ export default function FavoritesList({
   }, 0)
 
   return (
-    <div className="card mb-4">
-      <div className="row card-body">
-        <h5 className="card-title mb-4 fw-bold">Lista de favoritos:</h5>
+    <div className='card mb-4'>
+      <div className='row card-body'>
+        <h5 className='card-title mb-4 fw-bold'>Lista de favoritos:</h5>
 
         {favoriteProducts.length > 0 ? (
-          <div className="table-responsive">
-            <table className="table table-borderless">
+          <div className='table-responsive'>
+            <table className='table table-borderless'>
               <thead>
                 <tr>
-                  <th>Produto</th>
+                  <th>Product</th>
                   <th>Preço</th>
                   <th>Desconto</th>
                   <th>Opções</th>
@@ -48,12 +48,12 @@ export default function FavoritesList({
           <p>Sua lista de favoritos está vazia.</p>
         )}
       </div>
-      <div className="card-footer d-flex flex-column">
-        <small className="text-muted">
+      <div className='card-footer d-flex flex-column'>
+        <small className='text-muted'>
           Quantidade de produtos: {favoriteProducts.length}
         </small>
 
-        <small className="text-muted">
+        <small className='text-muted'>
           Valor total: R$ {totalFavoriteValue}
         </small>
       </div>

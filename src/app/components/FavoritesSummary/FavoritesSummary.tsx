@@ -1,9 +1,9 @@
-import type { Produto } from '@/app/types/product'
+import { Product } from '@/app/types/product'
 import ProductCard from '../ProductCard/ProductCard'
 
 interface FavoritesSummaryProps {
-  favorites: Produto[]
-  setFavorites: React.Dispatch<React.SetStateAction<Produto[]>>
+  favorites: Product[]
+  setFavorites: React.Dispatch<React.SetStateAction<Product[]>>
 }
 
 export default function FavoritesSummary({
@@ -14,12 +14,12 @@ export default function FavoritesSummary({
 
   return (
     <>
-      <h5 className="mb-3 mt-4 mt-lg-0 ms-1">Últimos favoritados:</h5>
+      <h5 className='mb-3 mt-4 mt-lg-0 ms-1'>Últimos favoritados:</h5>
 
-      <div className="row row-cols-1 g-3 border rounded-1 pb-3 mt-3 bg-light ms-1">
+      <div className='row row-cols-1 g-3 border rounded-1 pb-3 mt-3 bg-light ms-1'>
         {recentFavorites.length === 0 ? (
           <div>
-            <p className="text-muted">Sua lista está vazia</p>
+            <p className='text-muted'>Sua lista está vazia</p>
           </div>
         ) : (
           recentFavorites.map((product) => (
