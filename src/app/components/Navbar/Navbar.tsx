@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <nav className='navbar navbar-expand-md bg-light border-bottom border-body sticky-top'>
+    <nav className='navbar navbar-expand-md bg-body border-bottom sticky-top'>
       <div className='container-fluid'>
-        <a className='navbar-brand' href='/'>
+        <a className='navbar-brand fw-bold' href='/'>
           Loja WA
         </a>
         <button
@@ -35,7 +35,7 @@ export default function Navbar() {
           </ul>
 
           <Link className='nav-link ' href='/login'>
-            <button type='button' className='btn btn-secondary'>
+            <button type='button' className='btn btn-primary rounded-3'>
               Sair
             </button>
           </Link>

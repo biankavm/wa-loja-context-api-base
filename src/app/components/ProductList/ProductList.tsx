@@ -16,9 +16,9 @@ export default function ProductList({
   return (
     <div className='row row-cols-1 row-cols-lg-2'>
       <div className='col-lg-9'>
-        <h5 className='mb-3'>Produtos disponíveis:</h5>
+        <h5 className='mb-3 fw-semibold'>Produtos disponíveis:</h5>
 
-        <div className='row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3'>
+        <div className='row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4'>
           {products.map((product) => (
             <ProductCard
               key={product.id}

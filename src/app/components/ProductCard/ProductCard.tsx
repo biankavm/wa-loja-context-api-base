@@ -25,34 +25,38 @@ export default function ProductCard({
 
   return (
     <div className='col'>
-      <div className='card shadow-sm h-100'>
+      <div className='card h-100 border-0 shadow-sm rounded-4'>
         {showImage ? (
           <Image
             src={product.fotos[0].src}
-            className='card-img-top'
+            className='card-img-top rounded-top-4 bg-body-tertiary p-2 object-fit-contain'
             alt={product.fotos[0].titulo}
             width={150}
             height={180}
           />
         ) : null}
 
-        <div className='card-body bg-ligth'>
-          <span className='badge text-bg-success text-white mb-2 '>
+        <div className='card-body d-flex flex-column'>
+          <span className='badge text-success-emphasis bg-success-subtle border border-success-subtle align-self-start mb-2'>
             {product.desconto}% de desconto
           </span>
 
-          <h5 className='card-title fw-bold'>{product.nome}</h5>
-          <span className='text-secondary'>De R$ {product.preco}</span>
-          <h5 className='card-text'>
-            Por R${' '}
+          <h6 className='card-title fw-semibold mb-1'>{product.nome}</h6>
+
+          <span className='text-body-secondary small text-decoration-line-through'>
+            R$ {product.preco}
+          </span>
+
+          <p className='fs-5 fw-bold mb-3'>
+            R${' '}
             {calculateDiscountedPrice(Number(product.preco), product.desconto)}
-          </h5>
+          </p>
           {showButton ? (
             <button
               className={
                 isFavorite
-                  ? 'btn btn-success d-block w-100'
-                  : 'btn btn-secondary d-block w-100'
+                  ? 'btn btn-success d-block w-100 mt-auto rounded-3'
+                  : 'btn btn-primary d-block w-100 mt-auto rounded-3'
               }
               type='button'
               onClick={() => addToFavorites(product)}

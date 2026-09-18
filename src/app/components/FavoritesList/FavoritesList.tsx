@@ -18,13 +18,13 @@ export default function FavoritesList({
   }, 0)
 
   return (
-    <div className='card mb-4'>
+    <div className='card mb-4 border-0 shadow-sm rounded-4'>
       <div className='row card-body'>
         <h5 className='card-title mb-4 fw-bold'>Lista de favoritos:</h5>
 
         {favoriteProducts.length > 0 ? (
           <div className='table-responsive'>
-            <table className='table table-borderless'>
+            <table className='table table-borderless align-middle'>
               <thead>
                 <tr>
                   <th>Product</th>
