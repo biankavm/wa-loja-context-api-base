@@ -23,7 +23,10 @@ export default function LoginForm() {
   }
 
   return (
-    <div className='col-12 col-md-8 d-flex justify-content-center align-items-center'>
+    <div className='col-12 col-md-8 d-flex justify-content-center align-items-center p-4'>
+      <div className='card border-0 shadow-sm rounded-4 w-100' style={{ maxWidth: 420 }}>
+        <div className='card-body p-4 p-md-5'>
+          <h4 className='card-title fw-bold mb-4'>Entrar</h4>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='mb-3'>
           <label htmlFor='email' className='form-label'>
@@ -60,7 +63,7 @@ export default function LoginForm() {
         </div>
 
         <div className='d-grid col-12'>
-          <button type='submit' className='btn btn-success'>
+          <button type='submit' className='btn btn-primary btn-lg rounded-3'>
             Entrar
           </button>
         </div>
@@ -69,8 +72,10 @@ export default function LoginForm() {
           <Link href='/register' className='btn btn-link'>
             não tenho cadastro
           </Link>
+          </div>
+        </form>
+          </div>
         </div>
-      </form>
     </div>
   )
 }

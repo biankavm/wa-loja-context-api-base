@@ -27,11 +27,19 @@ export default function RegisterPage() {
   return (
     <main>
       <div className='container-fluid d-flex min-vh-100'>
-        <div className='row min-vw-100'>
-          <div className='col-12 col-md-4 bg-light d-flex justify-content-center align-items-center'>
-            <h2>Bem vindo à WA Loja!</h2>
+        <div className='row min-vw-100 g-0'>
+          <div className='col-12 col-md-4 bg-body-tertiary d-flex flex-column justify-content-center align-items-center p-5'>
+            <h2 className='fw-bold mb-2 text-center'>Bem vindo à WA Loja!</h2>
+            <p className='text-body-secondary text-center mb-0'>
+              Crie sua conta para salvar seus favoritos.
+            </p>
           </div>
-          <div className='col-12 col-md-8 d-flex justify-content-center align-items-center'>
+
+          <div className='col-12 col-md-8 d-flex justify-content-center align-items-center p-4'>
+            <div className='card border-0 shadow-sm rounded-4 w-100' style={{ maxWidth: 460 }}>
+              <div className='card-body p-4 p-md-5'>
+                <h4 className='card-title fw-bold mb-4'>Criar conta</h4>
+
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className='mb-3'>
                 <label htmlFor='nome' className='form-label'>
@@ -103,7 +111,7 @@ export default function RegisterPage() {
               </div>
 
               <div className='d-grid col-12'>
-                <button type='submit' className='btn btn-success'>
+                <button type='submit' className='btn btn-primary btn-lg rounded-3'>
                   Confirmar cadastro
                 </button>
               </div>
@@ -114,6 +122,8 @@ export default function RegisterPage() {
                 </Link>
               </div>
             </form>
+          </div>
+        </div>
           </div>
         </div>
       </div>
