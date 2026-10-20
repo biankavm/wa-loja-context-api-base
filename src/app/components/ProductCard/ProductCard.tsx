@@ -29,10 +29,10 @@ export default function ProductCard({
         {showImage ? (
           <Image
             src={product.fotos[0].src}
-            className='card-img-top rounded-top-4 bg-body-tertiary p-2 object-fit-contain'
+            className='card-img-top rounded-top-4 object-fit-cover w-100'
             alt={product.fotos[0].titulo}
-            width={150}
-            height={180}
+            width={300}
+            height={260}
           />
         ) : null}
 

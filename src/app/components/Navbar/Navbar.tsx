@@ -1,8 +1,15 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const ROUTES_WITHOUT_NAVBAR = ['/login', '/register']
 
 export default function Navbar() {
+  const pathname = usePathname()
+
+  if (ROUTES_WITHOUT_NAVBAR.includes(pathname)) return null
+
   return (
     <nav className='navbar navbar-expand-md bg-body border-bottom sticky-top'>
       <div className='container-fluid'>
